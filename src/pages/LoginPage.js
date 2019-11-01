@@ -3,6 +3,8 @@ import {
   Link,
 } from 'react-router-dom';
 
+import LoginForm from '../components/LoginForm';
+
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
@@ -15,6 +17,7 @@ class LoginPage extends React.Component {
     return (
       <div>
         Login Page
+        <LoginForm />
         <button type="button">
           <Link to="/">Login</Link>
         </button>
