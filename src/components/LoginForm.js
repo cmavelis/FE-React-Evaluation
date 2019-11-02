@@ -15,6 +15,7 @@ const LoginForm = (props) => {
     <div className="login-form">
       <p>Login to Our Magic Portal</p>
       <input
+        type="text"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Username"
