@@ -1,10 +1,18 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom';
 
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import InterestsPage from './InterestsPage';
 import InterestDetailPage from './InterestDetailPage';
+import { getInterests } from '../reducers/interests';
 
 class HomePage extends React.Component {
+  componentDidMount() {
+    // eslint-disable-next-line react/destructuring-assignment
+    this.props.getInterests();
+  }
+
   render() {
     return (
       <div>
@@ -32,4 +40,19 @@ class HomePage extends React.Component {
   }
 }
 
-export default HomePage;
+HomePage.propTypes = {
+  getInterests: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  interests: state.interests.data,
+});
+
+const mapDispatchToProps = {
+  getInterests,
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(HomePage);
