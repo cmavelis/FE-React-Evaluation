@@ -10,12 +10,21 @@ const LoginForm = (props) => {
   const handleLogin = () => {
     props.onLogin(username);
   };
-
+  // TODO: validation
   return (
     <div className="login-form">
       <p>Login to Our Magic Portal</p>
-      <input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Username" />
-      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
+      <input
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
+      />
+      <input
+        type="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="Password"
+      />
       <button type="button" onClick={handleLogin}>Login</button>
     </div>
   );
