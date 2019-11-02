@@ -2,6 +2,10 @@ import React from 'react';
 import {
   Link,
 } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import PropTypes from 'prop-types';
+import { login } from '../reducers/user';
 
 import LoginForm from '../components/LoginForm';
 
@@ -14,16 +18,30 @@ class LoginPage extends React.Component {
   }
 
   render() {
+    const { onLogin } = this.props;
     return (
       <div>
         Login Page
-        <LoginForm />
+        <LoginForm
+          onLogin={onLogin}
+        />
         <button type="button">
-          <Link to="/">Login</Link>
+          <Link to="/">Go to Home</Link>
         </button>
       </div>
     );
   }
 }
 
-export default LoginPage;
+LoginPage.propTypes = {
+  onLogin: PropTypes.func.isRequired,
+};
+
+const mapDispatchToProps = {
+  onLogin: login,
+};
+
+export default connect(
+  null,
+  mapDispatchToProps,
+)(LoginPage);

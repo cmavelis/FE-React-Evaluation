@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import './LoginForm.css';
 
-// TODO: excepted props: login function
-
-const LoginForm = () => {
+const LoginForm = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    console.log(username, password);
+    props.onLogin(username);
   };
 
   return (
@@ -20,6 +19,10 @@ const LoginForm = () => {
       <button type="button" onClick={handleLogin}>Login</button>
     </div>
   );
+};
+
+LoginForm.propTypes = {
+  onLogin: PropTypes.func.isRequired,
 };
 
 export default LoginForm;
