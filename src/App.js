@@ -21,17 +21,21 @@ function App() {
           <Header />
         </Route>
 
-        <Switch>
-          <Route path="/home">
-            <HomePage />
-          </Route>
-          <Route path="/interest/:id">
-            <InterestDetailPage />
-          </Route>
-          <Route path="/interests">
-            <InterestsPage />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route path="/home">
+              <HomePage />
+            </Route>
+            <Route path="/interests">
+              <InterestsPage />
+            </Route>
+            <Route path="/skills">
+              <SkillsPage />
+            </Route>
+            <Route path="/interest/:id">
+              <InterestDetailPage />
+            </Route>
+          </Switch>
+        </Route>
 
       </Switch>
     </div>

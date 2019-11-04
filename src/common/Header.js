@@ -1,17 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Header = (props) => {
   const { userName } = props;
+
+  const navigation = [
+    ['/home', 'Home'],
+    ['/skills', 'Skills'],
+    ['/interests', 'Interests'],
+
+    ['/interest/1', 'Interest 1'],
+    ['/login', 'Logout'],
+  ];
+
   return (
     <div className="App-header">
-      <nav>
+      <nav className="nav-bar">
         { `navbar ${userName}` }
-        <NavLink activeClassName="nav-link-active" to="/interest/1">Interest 1</NavLink>
-        <Link to="/interests">Interests</Link>
-        <Link to="/login">Logout</Link>
+        {navigation.map((navItem) => {
+          const url = navItem[0];
+          const name = navItem[1];
+          return <NavLink key={name} activeClassName="nav-link-active" to={url}>{name}</NavLink>;
+        })}
       </nav>
     </div>
   );
