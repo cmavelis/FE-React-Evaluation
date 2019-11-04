@@ -26,7 +26,7 @@ class LoginPage extends React.Component {
           onLogin={onLogin}
         />
         <button type="button">
-          <Link to="/">Go to Home</Link>
+          <Link to="/home">Go to Home</Link>
         </button>
       </div>
     );
