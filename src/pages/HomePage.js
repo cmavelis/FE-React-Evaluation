@@ -19,16 +19,17 @@ class HomePage extends React.Component {
   }
 
   render() {
+    const { userName } = this.props;
     return (
       <div>
-        Home Page
-
-        <button type="button">
+        <nav>
+          { `navbar ${userName}` }
           <Link to="/interest/1">Interest 1</Link>
-        </button>
-        <button type="button">
           <Link to="/interests">Interests</Link>
-        </button>
+          <Link to="/login">Login</Link>
+        </nav>
+
+        { `Welcome ${userName}` }
 
         <Switch>
 
@@ -48,9 +49,11 @@ class HomePage extends React.Component {
 HomePage.propTypes = {
   getInterests: PropTypes.func.isRequired,
   getSkills: PropTypes.func.isRequired,
+  userName: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({
+  userName: state.user.userName,
   interests: state.interests.data,
   skills: state.skills.data,
 });
