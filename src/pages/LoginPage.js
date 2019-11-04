@@ -21,7 +21,6 @@ class LoginPage extends React.Component {
     const { onLogin } = this.props;
     return (
       <div>
-        Login Page
         <LoginForm
           onLogin={onLogin}
         />

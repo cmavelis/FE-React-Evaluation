@@ -1,55 +1,32 @@
 import React from 'react';
-import { Route, Switch, Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import InterestsPage from './InterestsPage';
-import InterestDetailPage from './InterestDetailPage';
-import { getInterests } from '../reducers/interests';
-import { getSkills } from '../reducers/skills';
+import CardContainer from '../components/CardContainer';
 
 
-class HomePage extends React.Component {
-  componentDidMount() {
-    // eslint-disable-next-line no-shadow
-    const { getInterests, getSkills } = this.props;
-    getInterests();
-    getSkills();
-  }
-
-  render() {
-    const { userName } = this.props;
-    return (
-      <div>
-        <nav>
-          { `navbar ${userName}` }
-          <Link to="/interest/1">Interest 1</Link>
-          <Link to="/interests">Interests</Link>
-          <Link to="/login">Login</Link>
-        </nav>
-
-        { `Welcome ${userName}` }
-
-        <Switch>
-
-          <Route path="/interest/:id">
-            <InterestDetailPage />
-          </Route>
-          <Route path="/interests">
-            <InterestsPage />
-          </Route>
-
-        </Switch>
-      </div>
-    );
-  }
-}
+const HomePage = (props) => {
+  const { userName, interests, skills } = props;
+  return (
+    <div>
+      { `Welcome ${userName}` }
+      <p> Lorem ipsum </p>
+      <CardContainer data={interests} />
+      <CardContainer data={skills} />
+    </div>
+  );
+};
 
 HomePage.propTypes = {
-  getInterests: PropTypes.func.isRequired,
-  getSkills: PropTypes.func.isRequired,
   userName: PropTypes.string.isRequired,
+  interests: PropTypes.arrayOf(PropTypes.object),
+  skills: PropTypes.arrayOf(PropTypes.object),
+};
+
+HomePage.defaultProps = {
+  interests: [],
+  skills: [],
 };
 
 const mapStateToProps = (state) => ({
@@ -58,12 +35,6 @@ const mapStateToProps = (state) => ({
   skills: state.skills.data,
 });
 
-const mapDispatchToProps = {
-  getInterests,
-  getSkills,
-};
-
 export default connect(
   mapStateToProps,
-  mapDispatchToProps,
 )(HomePage);
