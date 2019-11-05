@@ -1,7 +1,4 @@
 import React from 'react';
-import {
-  Link,
-} from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import PropTypes from 'prop-types';
@@ -9,28 +6,24 @@ import { login } from '../reducers/user';
 
 import LoginForm from '../components/LoginForm';
 
-class LoginPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loggedIn: false,
-    };
-  }
+import './LoginPage.css';
+import logo from '../noinc_header.png';
 
-  render() {
-    const { onLogin } = this.props;
-    return (
-      <div>
+const LoginPage = (props) => {
+  const { onLogin } = props;
+  return (
+    <div className="login-page-card">
+      <div className="login-logo-wrapper">
+        <img src={logo} alt="NO.INC" className="login-logo" />
+      </div>
+      <div className="login-form-wrapper">
         <LoginForm
           onLogin={onLogin}
         />
-        <button type="button">
-          <Link to="/home">Go to Home</Link>
-        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 LoginPage.propTypes = {
   onLogin: PropTypes.func.isRequired,
