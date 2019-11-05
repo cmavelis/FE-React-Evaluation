@@ -1,6 +1,44 @@
+.header-wrapper {
+  height: 20vh;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.header-logo-wrapper {
+  height: 100%;
+  width: 30%;
+  background: rgba(92, 111, 125, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-wrapper {
+  width: 70%;
+  background-color: rgba(66, 80, 91, 1);
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 80%;
 }

@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
+import logo from '../noinc_header.png';
+import './Header.css';
+
 const Header = (props) => {
   const { userName } = props;
 
@@ -16,15 +19,30 @@ const Header = (props) => {
   ];
 
   return (
-    <div className="App-header">
-      <nav className="nav-bar">
-        { `navbar ${userName}` }
-        {navigation.map((navItem) => {
-          const url = navItem[0];
-          const name = navItem[1];
-          return <NavLink key={name} activeClassName="nav-link-active" to={url}>{name}</NavLink>;
-        })}
-      </nav>
+    <div className="header-wrapper">
+      <div className="header-logo-wrapper">
+        <img src={logo} alt="NO.INC" className="logo" />
+      </div>
+      <div className="nav-wrapper">
+        <nav className="nav-bar">
+          {navigation.map((navItem) => {
+            const url = navItem[0];
+            const name = navItem[1];
+            return (
+              <div>
+                <NavLink
+                  key={name}
+                  activeClassName="nav-link-active"
+                  to={url}
+                >
+                  {name}
+                </NavLink>
+              </div>
+            );
+          })}
+          { `navbar ${userName}` }
+        </nav>
+      </div>
     </div>
   );
 };
