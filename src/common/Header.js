@@ -28,7 +28,7 @@ const Header = (props) => {
             const url = navItem[0];
             const name = navItem[1];
             return (
-              <div>
+              <div className="nav-item">
                 <NavLink
                   key={name}
                   activeClassName="nav-link-active"
@@ -39,8 +39,8 @@ const Header = (props) => {
               </div>
             );
           })}
-          { `navbar ${userName}` }
         </nav>
+        <span className="header-username">{ ` Username ${userName}` }</span>
       </div>
     </div>
   );

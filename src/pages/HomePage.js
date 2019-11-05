@@ -6,13 +6,15 @@ import { connect } from 'react-redux';
 import CardContainer from '../components/CardContainer';
 import DATA_TYPES from '../common/DataTypes';
 
+import lorem from './lorem';
+
 
 const HomePage = (props) => {
   const { userName, interests, skills } = props;
   return (
     <div>
-      { `Welcome ${userName}` }
-      <p> Lorem ipsum </p>
+      <h1>{ `Welcome ${userName}` }</h1>
+      <p>{lorem}</p>
       <CardContainer data={interests} dataType={DATA_TYPES.INTEREST} />
       <CardContainer data={skills} dataType={DATA_TYPES.SKILL} />
     </div>
