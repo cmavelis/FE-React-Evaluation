@@ -1,14 +1,17 @@
 import React from 'react';
 
-class InterestDetailPage extends React.Component {
-  render() {
-    return (
-      <div>
-        Interest #
+import { useParams } from 'react-router-dom';
 
-      </div>
-    );
-  }
-}
+
+const InterestDetailPage = () => {
+  const { id } = useParams();
+
+  return (
+    <div>
+      Interest #
+      {id}
+    </div>
+  );
+};
 
 export default InterestDetailPage;

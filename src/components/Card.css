@@ -1,9 +1,9 @@
 .card {
   border: 10px solid white;
   padding: 30px;
-  width: 23vw;
-  height: 30vh;
-  min-height: 120px;
+  width: 30vmin;
+  height: 10vmax;
+  min-height: 140px;
   margin: 10px;
   background-color: rgba(244, 249, 253, 1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.349019607843137);

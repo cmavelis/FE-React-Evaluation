@@ -8,7 +8,6 @@ const InterestsPage = () => {
   const interests = useSelector((state) => state.interests);
   return (
     <div>
-        Interests Page
       <CardContainer data={interests.data} dataType={DATA_TYPES.INTEREST} />
     </div>
   );

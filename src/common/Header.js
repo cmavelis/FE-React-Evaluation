@@ -14,7 +14,6 @@ const Header = (props) => {
     ['/skills', 'Skills'],
     ['/interests', 'Interests'],
 
-    ['/interest/1', 'Interest 1'],
     ['/login', 'Logout'],
   ];
 

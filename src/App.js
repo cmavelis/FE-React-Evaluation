@@ -13,6 +13,7 @@ import InterestDetailPage from './pages/InterestDetailPage';
 import InterestsPage from './pages/InterestsPage';
 import SkillsPage from './pages/SkillsPage';
 import DataLoader from './common/DataLoader';
+import PageContent from './common/PageContent';
 
 function App() {
   return (
@@ -26,23 +27,25 @@ function App() {
           <Header />
           <DataLoader />
 
-          <Switch>
-            <Route path="/home">
-              <HomePage />
-            </Route>
-            <Route path="/interests">
-              <InterestsPage />
-            </Route>
-            <Route path="/skills">
-              <SkillsPage />
-            </Route>
-            <Route path="/interest/:id">
-              <InterestDetailPage />
-            </Route>
-            <Route path="/skill/:id">
-              <InterestDetailPage />
-            </Route>
-          </Switch>
+          <PageContent>
+            <Switch>
+              <Route path="/home">
+                <HomePage />
+              </Route>
+              <Route path="/interests">
+                <InterestsPage />
+              </Route>
+              <Route path="/skills">
+                <SkillsPage />
+              </Route>
+              <Route path="/interest/:id">
+                <InterestDetailPage />
+              </Route>
+              <Route path="/skill/:id">
+                <InterestDetailPage />
+              </Route>
+            </Switch>
+          </PageContent>
         </Route>
 
       </Switch>
