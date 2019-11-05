@@ -12,8 +12,8 @@ const HomePage = (props) => {
     <div>
       { `Welcome ${userName}` }
       <p> Lorem ipsum </p>
-      <CardContainer data={interests} />
-      <CardContainer data={skills} />
+      <CardContainer data={interests} dataType="Interest" />
+      <CardContainer data={skills} dataType="Skill" />
     </div>
   );
 };
