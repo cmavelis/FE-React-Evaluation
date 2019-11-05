@@ -4,6 +4,7 @@
   width: 30vmin;
   height: 10vmax;
   min-height: 140px;
+  min-width: 140px;
   margin: 10px;
   background-color: rgba(244, 249, 253, 1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.349019607843137);

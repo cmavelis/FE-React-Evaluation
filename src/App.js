@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage';
 
 import Header from './common/Header';
 import InterestDetailPage from './pages/InterestDetailPage';
+import SkillDetailPage from './pages/SkillDetailPage';
 import InterestsPage from './pages/InterestsPage';
 import SkillsPage from './pages/SkillsPage';
 import DataLoader from './common/DataLoader';
@@ -42,7 +43,7 @@ function App() {
                 <InterestDetailPage />
               </Route>
               <Route path="/skill/:id">
-                <InterestDetailPage />
+                <SkillDetailPage />
               </Route>
             </Switch>
           </PageContent>

@@ -1,5 +1,6 @@
 .header-wrapper {
   height: 10vh;
+  min-height: 40px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -63,10 +64,6 @@
 .nav-bar div:first-child{
   border-left: 1px solid #D7D7D7;
 }
-
-/*.nav-bar div:last-child {*/
-/*  border-right: none*/
-/*}*/
 
 .nav-link-active {
 
