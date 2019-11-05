@@ -1,0 +1,46 @@
+.card {
+  border: 10px solid white;
+  padding: 30px;
+  width: 23vw;
+  height: 30vh;
+  min-height: 120px;
+  margin: 10px;
+  background-color: rgba(244, 249, 253, 1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.349019607843137);
+  font-size: 0.85rem;
+}
+
+.card:hover {
+  border-color: #EC8643;
+  cursor: pointer;
+}
+
+.card-info-wrapper {
+  display: grid;
+  justify-content: left;
+  grid-template-columns: 80px auto;
+  grid-row-gap: 0.8rem;
+  text-align: left;
+  grid-template-areas:
+          "header header"
+          "main main"
+          "main main"
+          "footer footer";
+}
+
+.card-title {
+  margin: 0.3rem 0;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #EC8643;
+  grid-area: header;
+}
+
+.card-info-label {
+  font-weight: bold;
+}
+
+.card-info-footer {
+  font-style: italic;
+  grid-area: footer;
+}

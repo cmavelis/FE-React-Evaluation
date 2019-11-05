@@ -1,12 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Card from './Card';
+
+import './CardContainer.css';
+
 const CardContainer = (props) => {
-  const { data } = props;
+  const { data, dataType } = props; // TODO: replace dataType?
 
   return (
     <div className="card-container">
-      { data.map((card) => card.name && <div key={`card-${card.name}`}>{card.name}</div>)}
+      { data.map((card) => card && (
+        <Card
+          key={`card-${card.name}`}
+          id={card.id}
+          name={card.name}
+          type={card.type}
+          detail={card.detail}
+          label={dataType}
+        />
+      ))}
     </div>
   );
 };
@@ -14,12 +27,7 @@ const CardContainer = (props) => {
 
 CardContainer.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object).isRequired,
-  // PropTypes.shape({
-  //   id: PropTypes.number,
-  //   name: PropTypes.string,
-  //   type: PropTypes.string,
-  //   detail: PropTypes.string,
-  // }).isRequired,
+  dataType: PropTypes.string.isRequired,
 };
 
 export default CardContainer;

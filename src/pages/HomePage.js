@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import CardContainer from '../components/CardContainer';
+import DATA_TYPES from '../common/DataTypes';
 
 
 const HomePage = (props) => {
@@ -12,8 +13,8 @@ const HomePage = (props) => {
     <div>
       { `Welcome ${userName}` }
       <p> Lorem ipsum </p>
-      <CardContainer data={interests} />
-      <CardContainer data={skills} />
+      <CardContainer data={interests} dataType={DATA_TYPES.INTEREST} />
+      <CardContainer data={skills} dataType={DATA_TYPES.SKILL} />
     </div>
   );
 };

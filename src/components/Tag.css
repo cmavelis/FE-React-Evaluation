@@ -1,0 +1,25 @@
+.card-info-tag {
+  color: white;
+  font-size: 0.9em;
+  padding: 0.2em 0.5em;
+}
+
+.card-info-tag-1 {
+  background: darkslateblue;
+}
+
+.card-info-tag-2 {
+  background: forestgreen;
+}
+
+.card-info-tag-3 {
+  background: rosybrown;
+}
+
+.card-info-tag-4 {
+  background: orangered;
+}
+
+.card-info-tag-5 {
+  background: goldenrod;
+}
