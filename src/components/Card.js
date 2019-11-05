@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import Tag from './Tag';
 
@@ -9,11 +10,19 @@ const Card = (props) => {
   const {
     id, name, type, label, detail,
   } = props;
+  const url = `/${label}/${id}`;
+  const history = useHistory();
 
-  return (
-    <div className="card">
+  const handleClick = () => {
+    history.push(url);
+  };
+
+  const displayLabel = label.charAt(0).toUpperCase() + label.slice(1);
+
+  return ( // TODO: fix a11y ESLint errors or use a library
+    <div className="card" onClick={handleClick} role="button">
       <div className="card-info-wrapper">
-        <span className="card-title">{`${label} ${id}`}</span>
+        <span className="card-title">{`${displayLabel} ${id}`}</span>
         <span className="card-info-label">NAME:</span>
         <span className="card-info-item">{`${name}`}</span>
         <span className="card-info-label">TYPE:</span>
@@ -23,7 +32,6 @@ const Card = (props) => {
     </div>
   );
 };
-
 
 Card.propTypes = {
   id: PropTypes.number.isRequired,

@@ -39,6 +39,9 @@ function App() {
             <Route path="/interest/:id">
               <InterestDetailPage />
             </Route>
+            <Route path="/skill/:id">
+              <InterestDetailPage />
+            </Route>
           </Switch>
         </Route>
 
