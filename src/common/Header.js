@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
+import './Header.css';
+
 const Header = (props) => {
   const { userName } = props;
 
@@ -22,7 +24,17 @@ const Header = (props) => {
         {navigation.map((navItem) => {
           const url = navItem[0];
           const name = navItem[1];
-          return <NavLink key={name} activeClassName="nav-link-active" to={url}>{name}</NavLink>;
+          return (
+            <div>
+              <NavLink
+                key={name}
+                activeClassName="nav-link-active"
+                to={url}
+              >
+                {name}
+              </NavLink>
+            </div>
+          );
         })}
       </nav>
     </div>

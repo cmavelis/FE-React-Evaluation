@@ -1,6 +1,20 @@
+.App-header {
+  background-color: rgba(66, 80, 91, 1);
+  min-height: 30vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .nav-bar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  align-content: center;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 80%;
 }
