@@ -9,6 +9,8 @@ import reducer from './reducers';
 import * as serviceWorker from './serviceWorker';
 import App from './App';
 
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(

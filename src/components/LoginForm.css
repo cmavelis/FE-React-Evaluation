@@ -17,3 +17,8 @@
     border: none;
     border-radius: 5px;
 }
+
+.login-form-button:hover {
+    background: rgba(92, 111, 125, 1);
+    cursor: pointer;
+}

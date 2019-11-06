@@ -40,7 +40,10 @@ const Header = (props) => {
             );
           })}
         </nav>
-        <span className="header-username">{ ` Username ${userName}` }</span>
+        <span className="header-username">
+          <i className="fas fa-user" />
+          {userName}
+        </span>
       </div>
     </div>
   );
