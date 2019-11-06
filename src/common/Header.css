@@ -80,5 +80,10 @@
 }
 
 .header-username {
-  margin: 0 50px;
+  display: flex;
+  flex-direction: row;
 }
+.header-username * {
+  margin-right: 10px;
+}
+

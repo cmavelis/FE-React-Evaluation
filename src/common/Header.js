@@ -42,7 +42,7 @@ const Header = (props) => {
         </nav>
         <span className="header-username">
           <i className="fas fa-user" />
-          {userName}
+          <span>{userName}</span>
         </span>
       </div>
     </div>

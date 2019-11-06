@@ -10,3 +10,7 @@
   border: 1px solid #EC8643;
   margin: 20px 0;
 }
+
+.deactivated {
+  opacity: 0.5;
+}
