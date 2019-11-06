@@ -16,6 +16,7 @@ const HomePage = (props) => {
       <h1>{ `Welcome ${userName}` }</h1>
       <p>{lorem}</p>
       <CardContainer data={interests} dataType={DATA_TYPES.INTEREST} />
+      <div className="horizontal-line" />
       <CardContainer data={skills} dataType={DATA_TYPES.SKILL} />
     </div>
   );
