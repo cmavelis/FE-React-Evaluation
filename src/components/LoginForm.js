@@ -28,7 +28,7 @@ const LoginForm = (props) => {
 
   const handleLogin = () => {
     if (nameValid && passwordValid) {
-      props.onLogin(username, nameValid);
+      props.onLogin(username);
       history.push('/home');
     }
   };
