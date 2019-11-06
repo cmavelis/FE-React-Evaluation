@@ -13,7 +13,7 @@ const typeStyleLookup = {
 
 const Tag = (props) => {
   const { typeName } = props;
-  const tagNumber = typeStyleLookup[typeName.toLowerCase()];
+  const tagNumber = typeStyleLookup[typeName.toLowerCase()] || 0;
 
   const classNames = `card-info-tag card-info-tag-${tagNumber}`;
 

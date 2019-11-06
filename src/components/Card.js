@@ -18,8 +18,8 @@ const Card = (props) => {
   };
 
   const displayLabel = label.charAt(0).toUpperCase() + label.slice(1);
-
-  return ( // TODO: fix a11y ESLint errors or use a library
+  // TODO: fix a11y ESLint errors or use a library
+  return ( // eslint-disable-next-line
     <div className="card" onClick={handleClick} role="button">
       <div className="card-info-wrapper">
         <span className="card-title">{`${displayLabel} ${id}`}</span>

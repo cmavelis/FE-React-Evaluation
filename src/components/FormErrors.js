@@ -7,11 +7,8 @@ const FormErrors = (props) => {
   return (
     <div>
       {Object.keys(formErrors).map((fieldName) => (
-        <div className="form-errors form-error-message-wrapper">
-          <span
-            className="form-error-message"
-            key={`${fieldName}`}
-          >
+        <div className="form-errors form-error-message-wrapper" key={`form-${fieldName}`}>
+          <span className="form-error-message">
             {formErrors[fieldName].length > 0 && formErrors[fieldName]}
           </span>
         </div>
