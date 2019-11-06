@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import './LoginForm.css';
 
 const LoginForm = (props) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const history = useHistory();
 
   const handleLogin = () => {
     props.onLogin(username);
+    history.push('/home');
   };
   // TODO: validation
   return (
@@ -26,7 +29,13 @@ const LoginForm = (props) => {
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button type="button" onClick={handleLogin}>Login</button>
+      <button
+        type="button"
+        onClick={handleLogin}
+        className="login-form-button"
+      >
+        LOGIN
+      </button>
     </div>
   );
 };

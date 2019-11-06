@@ -8,7 +8,6 @@ const SkillsPage = () => {
   const skills = useSelector((state) => state.skills);
   return (
     <div>
-        Skills Page
       <CardContainer data={skills.data} dataType={DATA_TYPES.SKILL} />
     </div>
   );

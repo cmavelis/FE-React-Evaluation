@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  font-size: 13px;
 }
 
-.nav-link-active {
-  color: red;
+.horizontal-line {
+  box-sizing: border-box;
+  height: 1px;
+  width: 100%;
+  border: 1px solid #EC8643;
+  margin: 20px 0;
 }
