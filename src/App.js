@@ -3,6 +3,7 @@ import './App.css';
 import {
   Route,
   Switch,
+  Redirect,
 } from 'react-router-dom';
 
 import HomePage from './pages/HomePage';
@@ -24,6 +25,7 @@ function App() {
         <Route path="/login">
           <LoginPage />
         </Route>
+        <Redirect exact from="/" to="/login" />
         <Route path="/">
           <Header />
           <DataLoader />
